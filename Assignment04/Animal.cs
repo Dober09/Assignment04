@@ -19,9 +19,6 @@ namespace Assignment04
         private string? _gender;
         private bool _isEndangered;
 
-       
-
-
         // Properties with validation and formatting
         public string Name
         {
@@ -29,7 +26,6 @@ namespace Assignment04
             set => _name = !string.IsNullOrWhiteSpace(value) ? value.Trim() : throw new ArgumentException("Name cannot be empty");
         }
 
-        
         public string Species
         {
             get => _species;
@@ -123,6 +119,7 @@ namespace Assignment04
             return (Weight / Math.Pow(Height / 100.0, 2)); // Converting height to meters
         }
 
+        
         public string GetAgeGroup()
         {
             return Age switch
@@ -132,6 +129,23 @@ namespace Assignment04
                 < 7 => "Adult",
                 _ => "Senior"
             };
+        }
+
+
+        // Utility Methods
+
+        /// <summary>
+        /// this display the  infomation
+        /// </summary>
+        /// <returns></returns>
+        public string GetBasicInfo()
+        {
+            return $"Name: {Name}\n" +
+                   $"Species: {Species}\n" +
+                   $"Scientific Name: {ScientificName}\n" +
+                   $"Age: {Age} years\n" +
+                   $"Weight: {Weight:F1} kg\n" +
+                   $"Height: {Height:F1} cm";
         }
 
 
