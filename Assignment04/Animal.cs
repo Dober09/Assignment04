@@ -90,6 +90,12 @@ namespace Assignment04
         }
 
 
+        /// <summary>
+        /// the method is physical measurements
+        /// </summary>
+        /// <param name="weight"></param>
+        /// <param name="height"></param>
+        /// <exception cref="ArgumentException"></exception>
         public void UpdatePhysicalMeasurements(double weight, double height)
         {
             if (weight < 0 || height < 0)
@@ -99,6 +105,11 @@ namespace Assignment04
             Height = height;
         }
 
+        /// <summary>
+        /// the method to update age
+        /// </summary>
+        /// <param name="newAge"></param>
+        /// <exception cref="ArgumentException"></exception>
         public void UpdateAge(int newAge)
         {
             if (newAge < 0)

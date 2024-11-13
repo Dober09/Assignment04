@@ -8,7 +8,9 @@ namespace Assignment04
         public static void Main(string[] args)
         {
 
-            Animal  Whale  =  new Animal("Echo","Humpback Whale","Megaptera novaeangliae","Mammalia","female");
+            //first animal
+
+            Animal  Whale =  new Animal("Echo","Humpback Whale","Megaptera novaeangliae","Mammalia","female");
 
             Whale.Age = 10; 
 
@@ -28,6 +30,9 @@ namespace Assignment04
             Console.WriteLine($"BMI : {Whale.CalculateBodyMassIndex()}");
             
 
+            Console.WriteLine("****************\n****************");
+
+            //second animal
 
             Animal person = new Animal("Lebohang","Human", "Homo sapiens,", "Mammalia","Male");
 
